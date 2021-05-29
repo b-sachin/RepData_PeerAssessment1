@@ -1,8 +1,9 @@
 ---
 title: "Reproducible Research: Peer Assessment 1"
-output: html_document
 author: "Sachin B."
-keep_md: true
+output: 
+  html_document:
+    keep_md: true
 ---
 
 ```{r setup, include=FALSE}
@@ -196,7 +197,7 @@ In Activity dataset, steps per day mean and median doesn't affect much by replac
 df2$week <- ifelse(weekdays(df2$date) %in% c("Saturday","Sunday"), "weekend", "weekday")
 
 df2$week <- as.factor(df2$week)
-
+                              
 str(df2)
 
 ```
